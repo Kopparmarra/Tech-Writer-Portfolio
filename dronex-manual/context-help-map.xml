@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="introduction" path="topics/introduction.html"/>
+   <appContext helpID="getting-started" path="topics/getting-started.html"/>
+   <appContext helpID="install-android" path="topics/install-android.html"/>
+   <appContext helpID="install-ios" path="topics/install-ios.html"/>
+   <appContext helpID="flight-modes" path="topics/flight-modes.html"/>
+   <appContext helpID="safety" path="topics/safety.html"/>
+   <appContext helpID="fly-in-open-areas" path="topics/safety-guidelines.html"/>
+   <appContext helpID="safety-battery" path="topics/safety-battery.html"/>
+   <appContext helpID="troubleshooting" path="topics/troubleshooting.html"/>
+   <appContext helpID="no-power" path="topics/no-power.html"/>
+   <appContext helpID="gps-issue" path="topics/gps-issue.html"/>
+   <appContext helpID="controller-pair" path="topics/controller-pair.html"/>
+   <appContext helpID="maintenance" path="topics/maintenance.html"/>
+</map>
