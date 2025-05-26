@@ -1,1 +1,0 @@
-oxy_webhelp_navlinks = {"tocId-d208e80":{"topics":[{"title":"The drone does not power on","href":"topics\/no-power.html","attributes":{"data-id":"no-power"},"menu":{"hasChildren":false},"tocID":"no-power-d208e88","topics":[]}]}};
