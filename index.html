@@ -15,6 +15,10 @@
     h1 {
       color: #2c3e50;
     }
+    h2 {
+      color: #34495e;
+      margin-top: 2rem;
+    }
     a {
       color: #2980b9;
       text-decoration: none;
@@ -22,33 +26,60 @@
     a:hover {
       text-decoration: underline;
     }
+    .project {
+      margin-bottom: 2rem;
+    }
+    pre {
+      background: #ecf0f1;
+      padding: 1rem;
+      overflow-x: auto;
+    }
   </style>
 </head>
 <body>
   <h1>Lars Nilsson – Technical Writer</h1>
-  <p>I create documentation using DITA, XML and Simplified Technical English. Here is a selected project:</p>
+  <p>I create documentation using DITA, XML and Simplified Technical English. Below are selected projects:</p>
 
-  <h2>DroneX User Manual</h2>
-  <p>Made in DITA/XML with Oxygen and published to WebHelp. Manual for a consumer drone, built with structured topics, safety guidance, and conditional content for Android and iOS.</p>
-  <a href="dronex-manual/index.html" target="_blank">📘 View Dronex User Manual (WebHelp)</a>
+  <div class="project">
+    <h2>📘 DroneX User Manual</h2>
+    <p>DITA/XML manual created in Oxygen and published to WebHelp. Includes structured topics, safety instructions, and conditional content for Android/iOS.</p>
+    <a href="dronex-manual/index.html" target="_blank">View DroneX Manual (WebHelp)</a>
+    <pre>
+DroneX User Manual
+├── Introduction
+├── Getting Started
+│   ├── Install on Android
+│   └── Install on iOS
+├── Safety
+│   ├── General Guidelines
+│   └── Battery Safety
+├── Flight Modes
+├── Troubleshooting
+│   ├── Power issues
+│   ├── GPS signal problems
+│   └── Controller pairing
+└── Maintenance
+    </pre>
+  </div>
 
-  <h2>DITAMAP Structure</h2>
-  <pre>
-      DroneX User Manual
-      ├── Introduction
-      ├── Getting Started
-      │   ├── Install on Android
-      │   └── Install on iOS
-      ├── Safety
-      │   ├── General Guidelines
-      │   └── Battery Safety
-      ├── Flight Modes
-      ├── Troubleshooting
-      │   ├── The drone does not power on
-      │   ├── The drone cannot get a GPS signal
-      │   └── The controller will not pair with the drone
-      └── Maintenance
-  </pre>
+  <div class="project">
+    <h2>💉 VitaPress BP1000 Manual</h2>
+    <p>User manual for a blood pressure monitor, created with DITA/XML and Positron AI plugin in Oxygen. Features structured task-based content, clear safety instructions, and embedded imagery.</p>
+    <a href="vitapress-manual/index.html" target="_blank">View VitaPress BP1000 Manual (WebHelp)</a>
+    <pre>
+VitaPress BP1000 – User Manual
+├── Introduction
+├── Setup
+│   ├── Insert Batteries
+│   └── Calibrate Unit
+├── Usage
+│   └── Perform Measurement
+├── Understanding Results
+├── Maintenance
+├── Safety
+└── Troubleshooting
+    </pre>
+  </div>
 
   <h2>About Me</h2>
   <p>I specialize in technical communication for software and hardware products, with a focus on clarity, reuse, and maintainability.</p>
