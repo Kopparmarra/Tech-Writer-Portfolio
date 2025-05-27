@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"tocId-d190e44":{"topics":[{"title":"Perform Measurement","shortdesc":"<p class=\"shortdesc\">Steps to take a blood pressure measurement.<\/p>","href":"topics\/usage\/perform-measurement.html","attributes":{"data-id":"perform-measurement"},"menu":{"hasChildren":false},"tocID":"perform-measurement-d190e45","topics":[]}]}};

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="introduction" path="topics/introduction.html"/>
+   <appContext helpID="insert-batteries" path="topics/setup/insert-batteries.html"/>
+   <appContext helpID="calibrate-unit" path="topics/setup/calibrate-unit.html"/>
+   <appContext helpID="perform-measurement"
+               path="topics/usage/perform-measurement.html"/>
+   <appContext helpID="understanding-values"
+               path="topics/reference/understanding-values.html"/>
+   <appContext helpID="cleaning" path="topics/maintenance/cleaning.html"/>
+   <appContext helpID="safety-info" path="topics/safety/safety-info.html"/>
+   <appContext helpID="error-codes" path="topics/troubleshooting/error-codes.html"/>
+</map>

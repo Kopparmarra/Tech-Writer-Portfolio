@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"tocId-d190e57":{"topics":[{"title":"Understanding Measurement Values","shortdesc":"<p class=\"shortdesc\">Explanation of systolic, diastolic, and pulse readings.<\/p>","href":"topics\/reference\/understanding-values.html","attributes":{"data-id":"understanding-values"},"menu":{"hasChildren":false},"tocID":"understanding-values-d190e58","topics":[]}]}};

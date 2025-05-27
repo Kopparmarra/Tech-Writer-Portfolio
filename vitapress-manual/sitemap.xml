@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>topics/introduction.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+   <url>
+      <loc>topics/setup/insert-batteries.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+   <url>
+      <loc>topics/setup/calibrate-unit.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+   <url>
+      <loc>topics/usage/perform-measurement.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+   <url>
+      <loc>topics/reference/understanding-values.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+   <url>
+      <loc>topics/maintenance/cleaning.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+   <url>
+      <loc>topics/safety/safety-info.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+   <url>
+      <loc>topics/troubleshooting/error-codes.html</loc>
+      <lastmod>2025-05-27T09:39:58Z</lastmod>
+   </url>
+</urlset>

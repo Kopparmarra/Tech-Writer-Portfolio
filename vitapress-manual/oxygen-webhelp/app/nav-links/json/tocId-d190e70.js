@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"tocId-d190e70":{"topics":[{"title":"Cleaning and Care","shortdesc":"<p class=\"shortdesc\">Instructions for cleaning the device safely.<\/p>","href":"topics\/maintenance\/cleaning.html","attributes":{"data-id":"cleaning"},"menu":{"hasChildren":false},"tocID":"cleaning-d190e71","topics":[]}]}};
