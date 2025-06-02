@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Lars Nilsson – Technical Writer Portfolio</title>
   <style>
     body {
@@ -12,33 +12,109 @@
       line-height: 1.6;
       background-color: #f9f9f9;
     }
+
     h1 {
       color: #2c3e50;
     }
+
+    h2 {
+      color: #000000;
+    }
+
     a {
       color: #2980b9;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    summary {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+
+    details {
+      margin-bottom: 1.5rem;
+    }
+
+    pre {
+      background-color: #eeeeee;
+      padding: 1rem;
+      overflow-x: auto;
     }
   </style>
 </head>
 <body>
   <h1>Lars Nilsson – Technical Writer</h1>
-  <p>I create documentation using DITA, XML, Markdown and Simplified Technical English. Below are selected projects:</p>
+  <p>I create documentation using DITA, XML, Markdown and Simplified Technical English. Here are some selected projects:</p>
 
-  <h2>DroneX User Manual</h2>
+  <h2>Dronex User Manual</h2>
   <p>Made in DITA/XML with Oxygen and published to WebHelp. Manual for a consumer drone, built with structured topics, safety guidance, and conditional content for Android and iOS.</p>
-  <a href="dronex-manual/index.html" target="_blank">📘 View DroneX User Manual (WebHelp)</a>
+  <p><a href="dronex-manual/index.html" target="_blank">📘 View Dronex User Manual (WebHelp)</a></p>
+
+  <details>
+    <summary>DITAMAP Structure</summary>
+    <pre>
+DroneX User Manual
+├── Introduction
+├── Getting Started
+│   ├── Install on Android
+│   └── Install on iOS
+├── Safety
+│   ├── General Guidelines
+│   └── Battery Safety
+├── Flight Modes
+├── Troubleshooting
+│   ├── The drone does not power on
+│   ├── The drone cannot get a GPS signal
+│   └── The controller will not pair with the drone
+└── Maintenance
+    </pre>
+  </details>
 
   <h2>VitaPress BP1000 Manual</h2>
-  <p>Another DITA/XML project published to WebHelp. Demonstrates structured documentation for a MedTech blood pressure monitor with topics for setup, safety, troubleshooting and calibration.</p>
-  <a href="vitapress-manual/index.html" target="_blank">📘 View VitaPress BP1000 Manual (WebHelp)</a>
+  <p>User manual for a blood pressure monitor, written in DITA/XML and published with WebHelp. Uses images, task-based instructions, and a structured layout suitable for end users.</p>
+  <p><a href="vitapress-manual/index.html" target="_blank">📘 View VitaPress Manual (WebHelp)</a></p>
 
-  <h2>GitHub API Docs</h2>
-  <p>A Markdown-based documentation project using MkDocs and the Material theme. Explains core GitHub API endpoints with examples and explanations tailored for beginners.</p>
-  <a href="https://kopparmarra.github.io/github-api-docs/" target="_blank">📘 View GitHub API Docs</a>
+  <details>
+    <summary>DITAMAP Structure</summary>
+    <pre>
+VitaPress BP1000 – User Manual
+├── Introduction
+├── Setup
+│   ├── Insert Batteries
+│   └── Calibrate Unit
+├── Usage
+│   └── Perform Measurement
+├── Understanding Results
+│   └── Understanding Measurement Values
+├── Maintenance
+│   └── Cleaning and Care
+├── Safety
+│   └── Safety Information
+└── Troubleshooting
+    └── Error Codes
+    </pre>
+  </details>
+
+  <h2>GitHub API Docs (Markdown)</h2>
+  <p>Simple API documentation site made with Markdown and MkDocs. Styled using Material for MkDocs and hosted on GitHub Pages. Explains authentication, endpoints, and HTTP examples.</p>
+  <p><a href="https://kopparmarra.github.io/github-api-docs/" target="_blank">📘 View GitHub API Docs (Markdown)</a></p>
+
+  <details>
+    <summary>Sections</summary>
+    <pre>
+GitHub API Documentation
+├── Introduction
+├── Authentication
+├── Repositories
+├── Issues
+└── Users
+    </pre>
+  </details>
 
   <h2>About Me</h2>
   <p>I specialize in technical communication for software and hardware products, with a focus on clarity, reuse, and maintainability.</p>
