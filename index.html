@@ -2,63 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Technical Writing Portfolio – Lars Nilsson</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f4f0;
+      --ink: #111;
+      --muted: #666;
+      --rule: #d0cec8;
+      --accent-dita: #1a5276;
+      --accent-api: #1e8449;
+      --accent-ils: #7d3c98;
+      --tag-bg: #eae9e4;
+    }
+
     body {
-      font-family: sans-serif;
-      max-width: 800px;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      max-width: 760px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 4rem 2rem 6rem;
       line-height: 1.6;
-      background-color: #f9f9f9;
     }
 
-    h1 {
-      color: #2c3e50;
+    /* Header */
+    header {
+      border-top: 3px solid var(--ink);
+      padding-top: 1.5rem;
+      margin-bottom: 3.5rem;
     }
 
-    h2 {
-      color: #000000;
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
     }
 
-    a {
-      color: #2980b9;
-      text-decoration: none;
+    header p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.6;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    summary {
-      font-weight: bold;
-      margin-top: 0.5rem;
-      cursor: pointer;
-    }
-
-    details {
+    /* Section label */
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
       margin-bottom: 1.5rem;
     }
 
+    /* Project cards */
+    .project {
+      border-top: 1px solid var(--rule);
+      padding: 1.75rem 0;
+      display: grid;
+      grid-template-columns: 3px 1fr;
+      gap: 0 1.5rem;
+    }
+
+    .project-bar {
+      width: 3px;
+      border-radius: 2px;
+      background: var(--accent-dita);
+      align-self: stretch;
+    }
+
+    .project.api .project-bar   { background: var(--accent-api); }
+    .project.ils .project-bar   { background: var(--accent-ils); }
+
+    .project-content h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-content p {
+      font-size: 0.875rem;
+      color: #444;
+      margin-bottom: 0.75rem;
+      line-height: 1.65;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      background: var(--tag-bg);
+      color: var(--muted);
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+
+    .project-link {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+      transition: opacity 0.15s;
+    }
+    .project-link:hover { opacity: 0.5; }
+
+    /* DITAMAP */
+    details {
+      margin-top: 1rem;
+    }
+
+    summary {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+    summary::before {
+      content: '▶';
+      font-size: 0.6rem;
+      transition: transform 0.2s;
+    }
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
     pre {
-      background-color: #eeeeee;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      background: #eae9e4;
       padding: 1rem;
       overflow-x: auto;
+      line-height: 1.7;
+      border-radius: 2px;
+      color: #333;
+    }
+
+    /* About */
+    .about {
+      border-top: 1px solid var(--rule);
+      padding-top: 1.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .about p {
+      font-size: 0.875rem;
+      color: #444;
+      margin-bottom: 0.4rem;
+    }
+
+    .about a {
+      color: var(--ink);
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
-  <h1>Technical Writing Portfolio – Lars Nilsson</h1>
-  <p>A collection of sample documentation projects including DITA-based manuals, WebHelp documentation, API docs and an interactive introduction to Integrated Logistics Support (ILS).</p>
 
-  <h2>Dronex User Manual</h2>
-  <p>Made in DITA/XML with Oxygen and published to WebHelp. Manual for a consumer drone, built with structured topics, safety guidance, and conditional content for Android and iOS.</p>
-  <p><a href="dronex-manual/index.html" target="_blank">📘 View Dronex User Manual (WebHelp)</a></p>
+  <header>
+    <h1>Technical Writing Portfolio – Lars Nilsson</h1>
+    <p>A collection of sample documentation projects including DITA-based manuals, WebHelp documentation, API docs and an interactive introduction to Integrated Logistics Support (ILS).</p>
+  </header>
 
-  <details>
-    <summary>DITAMAP Structure</summary>
-    <pre>
-DroneX User Manual
+  <div class="section-label">Selected Projects</div>
+
+  <!-- Dronex -->
+  <div class="project">
+    <div class="project-bar"></div>
+    <div class="project-content">
+      <h2>Dronex User Manual</h2>
+      <p>Made in DITA/XML with Oxygen and published to WebHelp. Manual for a consumer drone, built with structured topics, safety guidance, and conditional content for Android and iOS.</p>
+      <div class="tags">
+        <span class="tag">DITA/XML</span>
+        <span class="tag">Oxygen</span>
+        <span class="tag">WebHelp</span>
+        <span class="tag">Conditional content</span>
+      </div>
+      <a class="project-link" href="dronex-manual/index.html" target="_blank">View Dronex User Manual →</a>
+      <details>
+        <summary>DITAMAP Structure</summary>
+        <pre>DroneX User Manual
 ├── Introduction
 ├── Getting Started
 │   ├── Install on Android
@@ -71,18 +214,26 @@ DroneX User Manual
 │   ├── The drone does not power on
 │   ├── The drone cannot get a GPS signal
 │   └── The controller will not pair with the drone
-└── Maintenance
-    </pre>
-  </details>
+└── Maintenance</pre>
+      </details>
+    </div>
+  </div>
 
-  <h2>VitaPress BP1000 Manual</h2>
-  <p>User manual for a blood pressure monitor, written in DITA/XML and published with WebHelp. Uses images, task-based instructions, and a structured layout suitable for end users.</p>
-  <p><a href="vitapress-manual/index.html" target="_blank">📘 View VitaPress Manual (WebHelp)</a></p>
-
-  <details>
-    <summary>DITAMAP Structure</summary>
-    <pre>
-VitaPress BP1000 – User Manual
+  <!-- VitaPress -->
+  <div class="project">
+    <div class="project-bar"></div>
+    <div class="project-content">
+      <h2>VitaPress BP1000 Manual</h2>
+      <p>User manual for a blood pressure monitor, written in DITA/XML and published with WebHelp. Uses images, task-based instructions, and a structured layout suitable for end users.</p>
+      <div class="tags">
+        <span class="tag">DITA/XML</span>
+        <span class="tag">WebHelp</span>
+        <span class="tag">Task-based</span>
+      </div>
+      <a class="project-link" href="vitapress-manual/index.html" target="_blank">View VitaPress Manual →</a>
+      <details>
+        <summary>DITAMAP Structure</summary>
+        <pre>VitaPress BP1000 – User Manual
 ├── Introduction
 ├── Setup
 │   ├── Insert Batteries
@@ -96,20 +247,49 @@ VitaPress BP1000 – User Manual
 ├── Safety
 │   └── Safety Information
 └── Troubleshooting
-    └── Error Codes
-    </pre>
-  </details>
+    └── Error Codes</pre>
+      </details>
+    </div>
+  </div>
 
-  <h2>GitHub API Docs (Markdown)</h2>
-  <p>Simple API documentation site made with Markdown and MkDocs. Styled using Material for MkDocs and hosted on GitHub Pages. Explains authentication, endpoints, and HTTP examples.</p>
-  <p><a href="https://kopparmarra.github.io/github-api-docs/" target="_blank">📘 View GitHub API Docs (Markdown)</a></p>
+  <!-- GitHub API Docs -->
+  <div class="project api">
+    <div class="project-bar"></div>
+    <div class="project-content">
+      <h2>GitHub API Docs (Markdown)</h2>
+      <p>Simple API documentation site made with Markdown and MkDocs. Styled using Material for MkDocs and hosted on GitHub Pages. Explains authentication, endpoints, and HTTP examples.</p>
+      <div class="tags">
+        <span class="tag">Markdown</span>
+        <span class="tag">MkDocs</span>
+        <span class="tag">GitHub Pages</span>
+        <span class="tag">API docs</span>
+      </div>
+      <a class="project-link" href="https://kopparmarra.github.io/github-api-docs/" target="_blank">View GitHub API Docs →</a>
+    </div>
+  </div>
 
-  <h2>ILS Fundamentals – Self-Learning Project</h2>
-  <p>An interactive self-learning course on Integrated Logistics Support (ILS) for technical writers. Eight modules covering LSA/LORA, S1000D, configuration management and IETP tools, built with HTML/CSS/JavaScript and published via GitHub Pages.</p>
-  <p><a href="https://kopparmarra.github.io/ils_course/" target="_blank">📘 View ILS Fundamentals</a></p>
+  <!-- ILS -->
+  <div class="project ils">
+    <div class="project-bar"></div>
+    <div class="project-content">
+      <h2>ILS Fundamentals – Self-Learning Project</h2>
+      <p>An interactive self-learning course on Integrated Logistics Support (ILS) for technical writers. Eight modules covering LSA/LORA, S1000D, configuration management and IETP tools, built with HTML/CSS/JavaScript and published via GitHub Pages.</p>
+      <div class="tags">
+        <span class="tag">ILS</span>
+        <span class="tag">S1000D</span>
+        <span class="tag">LSA/LORA</span>
+        <span class="tag">HTML/CSS/JS</span>
+        <span class="tag">GitHub Pages</span>
+      </div>
+      <a class="project-link" href="https://kopparmarra.github.io/ils_course/" target="_blank">View ILS Fundamentals →</a>
+    </div>
+  </div>
 
-  <h2>About Me</h2>
-  <p>I specialize in technical communication for software and hardware products, with a focus on clarity, reuse, and maintainability.</p>
-  <p>Contact: <a href="mailto:larsnilsson@mail.com">larsnilsson@mail.com</a></p>
+  <!-- About -->
+  <div class="about">
+    <p>I specialize in technical communication for software and hardware products, with a focus on clarity, reuse, and maintainability.</p>
+    <p>Contact: <a href="mailto:larsnilsson@mail.com">larsnilsson@mail.com</a></p>
+  </div>
+
 </body>
 </html>
