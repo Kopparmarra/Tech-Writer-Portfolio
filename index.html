@@ -175,7 +175,27 @@
       color: var(--ink);
       font-weight: 500;
     }
-  </style>
+  
+  .intro-block {
+    max-width: 860px;
+    margin: 0 auto 28px auto;
+    padding: 22px 24px;
+    background: #f7f2e8;
+    border-left: 6px solid #b68c2f;
+    border-radius: 8px;
+  }
+
+  .intro-block h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+
+  .intro-block p {
+    margin: 0;
+  }
+
+</style>
 </head>
 <body>
 
@@ -183,6 +203,12 @@
     <h1>Technical Writing Portfolio – Lars Nilsson</h1>
     <p>A collection of sample documentation projects including DITA-based manuals, WebHelp documentation, API docs, an interactive introduction to Integrated Logistics Support (ILS), and an S1000D beginner course.</p>
   </header>
+
+
+  <section class="intro-block">
+    <h2>From IT support to technical writing</h2>
+    <p>I’ve spent years in IT support, troubleshooting systems, working with identity management, and writing internal documentation in Confluence. That experience taught me what happens when documentation fails: tickets pile up, users get stuck, and critical knowledge becomes hard to find. Today, I’m building on that foundation by moving into technical writing and ILS through independent study and hands-on projects like the ones shown here.</p>
+  </section>
 
   <div class="section-label">Selected Projects</div>
 
@@ -198,7 +224,7 @@
         <span class="tag">WebHelp</span>
         <span class="tag">Conditional content</span>
       </div>
-      <a class="project-link" href="drone-manual/index.html" target="_blank">View DroneX User Manual →</a>
+      <a class="project-link" href="dronex-manual/index.html" target="_blank">View DroneX User Manual →</a>
       <details>
         <summary>DITAMAP Structure</summary>
         <pre>DroneX User Manual
