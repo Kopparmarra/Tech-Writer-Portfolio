@@ -14,7 +14,6 @@
       --muted: #666;
       --rule: #d0cec8;
       --accent-dita: #1a5276;
-      --accent-api: #1e8449;
       --accent-ils: #7d3c98;
       --accent-warm: #b06d2f;
       --tag-bg: #eae9e4;
@@ -53,7 +52,7 @@
 
     .intro-block {
       max-width: 860px;
-      margin: 0 auto 28px auto;
+      margin: 0 auto 28px;
       padding: 20px 22px;
       background: #f3efe6;
       border-radius: 8px;
@@ -68,7 +67,6 @@
 
     .intro-block p {
       font-size: 1rem;
-      font-weight: 400;
       line-height: 1.7;
       color: #222;
     }
@@ -84,22 +82,27 @@
 
     .project {
       border-top: 1px solid var(--rule);
+      margin: 0;
       padding: 1.75rem 0;
       display: grid;
-      grid-template-columns: 3px 1fr;
+      grid-template-columns: 3px minmax(0, 1fr);
       gap: 0 1.5rem;
     }
 
     .project-bar {
       width: 3px;
       border-radius: 2px;
-      background: var(--accent-dita);
       align-self: stretch;
+      background: var(--accent-dita);
     }
 
-    .project.api .project-bar { background: var(--accent-api); }
     .project.ils .project-bar { background: var(--accent-ils); }
+    .project.dita .project-bar { background: var(--accent-dita); }
     .project.warm .project-bar { background: var(--accent-warm); }
+
+    .project-content {
+      min-width: 0;
+    }
 
     .project-content h2 {
       font-size: 1rem;
@@ -144,8 +147,10 @@
 
     .project-link:hover { opacity: 0.5; }
 
-    /* Tight spacing before the DITAMAP disclosure. */
-    details { margin-top: 0.35rem; }
+    /* DITAMAP sits close to its project link, without Safari's duplicate marker. */
+    details {
+      margin-top: 0.45rem;
+    }
 
     summary {
       font-family: 'IBM Plex Mono', monospace;
@@ -168,7 +173,9 @@
       transition: transform 0.2s;
     }
 
-    details[open] summary::before { transform: rotate(90deg); }
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
 
     pre {
       font-family: 'IBM Plex Mono', monospace;
@@ -210,12 +217,12 @@
 
   <header>
     <h1>Technical Writing Portfolio - Lars Nilsson</h1>
-    <p>A collection of S1000D migration work, CSDB and XML tooling, DMC/DMRL support, DITA-based manuals, and interactive ILS learning projects.</p>
+    <p>A collection of S1000D and ILS learning projects, structured documentation case studies, and DITA/XML manuals.</p>
   </header>
 
   <section class="intro-block">
-    <h2>Structured documentation, ILS thinking, and practical tooling</h2>
-    <p>I’ve spent years in IT support, troubleshooting systems, working with identity management, and writing internal documentation in Confluence. That background shaped how I approach technical writing: documentation should be clear, structured, maintainable, reusable, and useful in real workflows. Today, I’m building on that foundation through S1000D migration projects, CSDB concepts, DMC/DMRL tooling, ILS study, and XML-based documentation workflows for complex technical systems.</p>
+    <h2>Structured documentation, ILS thinking, and practical learning</h2>
+    <p>I’ve spent years in IT support, troubleshooting systems, working with identity management, and writing internal documentation in Confluence. That background shaped how I approach technical writing: documentation should be clear, structured, maintainable, reusable, and useful in real workflows. Some projects here are production-style case studies; others are tools I built to explore and understand complex documentation standards in practice.</p>
   </section>
 
   <div class="section-label">Selected Projects</div>
@@ -224,7 +231,7 @@
     <div class="project-bar"></div>
     <div class="project-content">
       <h2>S1000D Mini-CSDB — Interactive Emulator</h2>
-      <p>An interactive browser-based CSDB emulator built around the S1000D Issue 6 Bike sample dataset. Explore data modules, publication modules and ICN objects, follow references and where-used relationships, inspect issue history and source XML, and simulate a controlled author > review > approval workflow with a separate authoring-editor view.</p>
+      <p>An interactive browser-based CSDB emulator built around the S1000D Issue 6 Bike sample dataset. Explore data modules, publication modules and ICN objects, follow references and where-used relationships, inspect issue history and source XML, and simulate a controlled author &gt; review &gt; approval workflow with a separate authoring-editor view.</p>
       <div class="tags">
         <span class="tag">S1000D</span>
         <span class="tag">CSDB</span>
@@ -233,9 +240,8 @@
         <span class="tag">Publication Modules</span>
         <span class="tag">Workflow</span>
         <span class="tag">XML</span>
-        <span class="tag">GitHub Pages</span>
       </div>
-      <a class="project-link" href="https://kopparmarra.github.io/s1000d-mini-csdb/" target="_blank" rel="noopener">Launch Mini-CSDB ></a>
+      <a class="project-link" href="https://kopparmarra.github.io/s1000d-mini-csdb/" target="_blank" rel="noopener">Launch Mini-CSDB &gt;</a>
     </div>
   </div>
 
@@ -253,23 +259,7 @@
         <span class="tag">Maintenance Documentation</span>
         <span class="tag">ILS</span>
       </div>
-      <a class="project-link" href="https://kopparmarra.github.io/hx20-s1000d-migration/" target="_blank" rel="noopener">View HX-20 S1000D Case Study ></a>
-    </div>
-  </div>
-
-  <div class="project ils">
-    <div class="project-bar"></div>
-    <div class="project-content">
-      <h2>DMC Generator — S1000D Companion Tool</h2>
-      <p>An interactive browser-based tool for building and validating S1000D Data Module Codes (DMC). Supports all DMC segments with inline validation, colour-coded output, and a DMRL (Data Module Requirements List) builder with CSV and XML export.</p>
-      <div class="tags">
-        <span class="tag">S1000D</span>
-        <span class="tag">DMC</span>
-        <span class="tag">DMRL</span>
-        <span class="tag">Tooling</span>
-        <span class="tag">HTML/CSS/JS</span>
-      </div>
-      <a class="project-link" href="https://kopparmarra.github.io/DMC_generator/" target="_blank" rel="noopener">View DMC Generator ></a>
+      <a class="project-link" href="https://kopparmarra.github.io/hx20-s1000d-migration/" target="_blank" rel="noopener">View HX-20 S1000D Case Study &gt;</a>
     </div>
   </div>
 
@@ -285,11 +275,25 @@
         <span class="tag">Configuration Management</span>
         <span class="tag">IETP</span>
       </div>
-      <a class="project-link" href="https://kopparmarra.github.io/ils_course/" target="_blank" rel="noopener">View ILS Fundamentals ></a>
+      <a class="project-link" href="https://kopparmarra.github.io/ils_course/" target="_blank" rel="noopener">View ILS Fundamentals &gt;</a>
     </div>
   </div>
 
-  <div class="project">
+  <div class="project ils">
+    <div class="project-bar"></div>
+    <div class="project-content">
+      <h2>S1000D for Beginners</h2>
+      <p>Interactive beginner-friendly course that explains S1000D through a bicycle example. Covers core concepts, data module codes, information codes, BREX, and structured XML basics.</p>
+      <div class="tags">
+        <span class="tag">S1000D</span>
+        <span class="tag">XML</span>
+        <span class="tag">Learning Design</span>
+      </div>
+      <a class="project-link" href="https://kopparmarra.github.io/S1000D_course/" target="_blank" rel="noopener">View S1000D for Beginners &gt;</a>
+    </div>
+  </div>
+
+  <div class="project dita">
     <div class="project-bar"></div>
     <div class="project-content">
       <h2>DroneX User Manual</h2>
@@ -301,7 +305,7 @@
         <span class="tag">Conditional Content</span>
         <span class="tag">Structured Authoring</span>
       </div>
-      <a class="project-link" href="dronex-manual/index.html" target="_blank" rel="noopener">View DroneX User Manual ></a>
+      <a class="project-link" href="dronex-manual/index.html" target="_blank" rel="noopener">View DroneX User Manual &gt;</a>
       <details>
         <summary>DITAMAP Structure</summary>
         <pre>DroneX User Manual
@@ -322,22 +326,7 @@
     </div>
   </div>
 
-  <div class="section-label" style="margin-top: 2.5rem;">Additional Projects & Earlier Experiments</div>
-
-  <div class="project ils">
-    <div class="project-bar"></div>
-    <div class="project-content">
-      <h2>S1000D for Beginners</h2>
-      <p>Interactive beginner-friendly course that explains S1000D through a bicycle example. Covers core concepts, data module codes, information codes, BREX, and structured XML basics.</p>
-      <div class="tags">
-        <span class="tag">S1000D</span>
-        <span class="tag">XML</span>
-        <span class="tag">Learning Design</span>
-      </div>
-      <a class="project-link" href="https://kopparmarra.github.io/S1000D_course/" target="_blank" rel="noopener">View S1000D for Beginners ></a>
-    </div>
-  </div>
-<div class="project warm">
+  <div class="project warm">
     <div class="project-bar"></div>
     <div class="project-content">
       <h2>VitaPress BP1000 Manual</h2>
@@ -347,7 +336,7 @@
         <span class="tag">WebHelp</span>
         <span class="tag">Task-based</span>
       </div>
-      <a class="project-link" href="vitapress-manual/index.html" target="_blank" rel="noopener">View VitaPress Manual ></a>
+      <a class="project-link" href="vitapress-manual/index.html" target="_blank" rel="noopener">View VitaPress Manual &gt;</a>
       <details>
         <summary>DITAMAP Structure</summary>
         <pre>VitaPress BP1000 – User Manual
