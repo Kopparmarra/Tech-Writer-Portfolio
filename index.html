@@ -83,7 +83,7 @@
 
     .project {
       border-top: 1px solid var(--rule);
-      padding: 1.75rem 0;
+      padding: 1.8rem 0 2rem;
       display: grid;
       grid-template-columns: 3px 1fr;
       gap: 0 1.5rem;
@@ -97,6 +97,10 @@
     }
 
     .project.api .project-bar { background: var(--accent-api); }
+
+    .project + .project {
+      margin-top: 0.2rem;
+    }
     .project.ils .project-bar { background: var(--accent-ils); }
 
     .project-content h2 {
@@ -130,12 +134,15 @@
     }
 
     .project-link {
+      display: inline-block;
       font-size: 0.8rem;
       font-weight: 500;
       color: var(--ink);
       text-decoration: none;
       border-bottom: 1px solid var(--ink);
       padding-bottom: 1px;
+      margin-top: 0.05rem;
+      margin-bottom: 1.75rem;
       transition: opacity 0.15s;
     }
 
