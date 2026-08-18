@@ -421,8 +421,19 @@
   </div>
 
   <!-- Cloudflare Web Analytics -->
-  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f1b4342df2cb404580b215f115e9a2eb"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+<script>
+  if (localStorage.getItem('excludeFromAnalytics') !== 'true') {
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    script.setAttribute(
+      'data-cf-beacon',
+      '{"token":"f1b4342df2cb404580b215f115e9a2eb"}'
+    );
+    document.body.appendChild(script);
+  }
+</script>
+<!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>
