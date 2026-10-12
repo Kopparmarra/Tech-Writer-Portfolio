@@ -233,6 +233,37 @@
       font-weight: 500;
     }
 
+
+    .project-group {
+      margin: 0.25rem 0 1.25rem;
+      padding: 0.9rem 1rem 0.25rem;
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent-ils);
+      background: rgba(255,255,255,0.28);
+    }
+    .project-group-heading {
+      margin: 0 0 0.2rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.015em;
+    }
+    .project-group-intro {
+      margin: 0 0 0.25rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.45;
+      max-width: 620px;
+    }
+    .project-group .project {
+      padding: 1.05rem 0;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+    }
+    /* The group owns the single continuous accent bar; individual cards stay clean. */
+    .project-group .project-bar { display: none; }
+    .project-group .project:first-of-type { border-top: 1px solid var(--rule); margin-top: 0.6rem; }
+    .project-group .project:last-child { padding-bottom: 0.85rem; }
+
     @media (max-width: 600px) {
       body { padding: 2.5rem 1.25rem 4rem; }
       header { margin-bottom: 1.75rem; }
@@ -323,6 +354,10 @@
   </div>
 
 
+  <section class="project-group" aria-labelledby="change-configuration-heading">
+    <h2 class="project-group-heading" id="change-configuration-heading">From Change to Configuration</h2>
+    <p class="project-group-intro">Explore how engineering changes, configuration baselines and applicability connect in technical documentation.</p>
+
   <div class="project ils">
     <div class="project-bar"></div>
     <div class="project-content">
@@ -344,13 +379,13 @@
     <div class="project-bar"></div>
     <div class="project-content">
       <h2>Configuration Basics — Configuration Management Learning Tool</h2>
-      <p>An interactive introduction to configuration management through guided exercises on configuration items, baselines, and controlled change. The project explores how configuration status and verification help keep product definitions and their supporting technical information consistent throughout the lifecycle.</p>
+      <p>A guided introduction to configuration baselines, change control, effectivity and configuration audits, using a fictional DroneX product to connect CM concepts with practical decisions.</p>
       <div class="tags">
         <span class="tag">Configuration Management</span>
         <span class="tag">Baselines</span>
         <span class="tag">Change Control</span>
+        <span class="tag">Effectivity</span>
         <span class="tag">FCA/PCA</span>
-        <span class="tag">Technical Documentation</span>
       </div>
       <a class="project-link" href="https://kopparmarra.github.io/configuration-basics/" target="_blank" rel="noopener">Launch Configuration Basics &gt;</a>
     </div>
@@ -375,6 +410,8 @@
 
 
 
+
+  </section>
 
   <div class="project dita">
     <div class="project-bar"></div>
